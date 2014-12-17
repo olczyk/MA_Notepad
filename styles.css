@@ -65,6 +65,20 @@ table{
     cursor: pointer;
 }
 
+.toolbar ul li .button {
+    display:block;
+    padding:20px 20px;
+    color:#FFF;
+    text-decoration:none;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(144, 180, 255);
+}
+
+.toolbar li .button:hover {
+    background-color: #2980b9;
+}
+
 .toolbar li a:hover {
     background-color: #2980b9;
 }
@@ -92,19 +106,20 @@ table{
     border-bottom:none;
 }
 
-.toolbar ul ul li i {
-    margin-right:10px;
+.fontSizes{
+    margin-right: 10px;
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(144, 180, 255);
+    width: 70px;
+    padding: 5px;
 }
 
-.toolbar ul ul li a {
-    padding:5px 20px;
-}
-
-/* Second, Third and more Tiers */
-.toolbar ul ul ul li {
-    position: absolute;
-    top:-79px;
-    left:200px;
+.fontSizes:hover{
+    background-color: #2980b9;
 }
 
 .toolbar li > a:only-child:after {content: ''; }

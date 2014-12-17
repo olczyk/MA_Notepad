@@ -12,15 +12,14 @@
 <div>
 <div class="toolbar">
     <ul>
-        <li><a href="#"><i class="fa fa-bold fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-italic fa-2x"></i></a></li>
+        <li><button onClick="bold()" class="button"><i class="fa fa-bold fa-2x"></i></button></li>
+        <li><button onClick="italic()" class="button"><i class="fa fa-italic fa-2x"></i></button></li>
         <li><a href="#"><i class="fa fa-paint-brush fa-2x"></i></a>
         <li><a href="#"><i class="fa fa-text-height fa-2x"></i></a>
             <ul>
-                <li><a href="#">8</a></li>
-                <li><a href="#">10</a></li>
-                <li><a href="#">12</a></li>
-                <li><a href="#">14</a></li>
+                <li><button onclick="changeFont('8px');" class="fontSizes">&nbsp;8</button></li>
+                <li><button onclick="changeFont('16px');" class="fontSizes">16</button></li>
+                <li><button onclick="changeFont('32px');" class="fontSizes">32</button></li>
             </ul>
         </li>
         <li><a onclick="saveTextAsFile()"><i class="fa fa-save fa-2x"></i></a></li>
@@ -46,7 +45,7 @@
         </tr>
         <tr>
             <td>
-                    <div id="inputText" placeholder="Document body" required class="inputTitle inputText" contenteditable="true"></div>
+                <div id="inputText" placeholder="Document body" required class="inputTitle inputText" contenteditable="true"></div>
             </td>
         </tr>
     </table>
