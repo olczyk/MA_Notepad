@@ -23,13 +23,15 @@ table{
 
 .textField {
     margin: 50px auto;
-    padding: 50px 40px;
+    padding: 40px 40px;
     width: 100%;
     max-width: 800px;
     min-width: 480px;
+    height: 1131px;
     background: rgb(255, 255, 255);
     font-family: Asap, sans-serif;
     box-shadow: rgb(170, 170, 170) 0px 0px 20px;
+    margin-bottom: auto;
 }
 
 .toolbar ul {
@@ -129,7 +131,7 @@ table{
     width:70px
 }
 
-.divTitle {
+.divInput {
     position: relative;
 }
 
@@ -147,10 +149,21 @@ table{
     z-index: 1;
     width: 100%;
     padding: 0.5em;
-    border: 1px solid #c8c8c8;
+    border: 1px solid #EEEEEE;
     margin-bottom: 1em;
 }
 
 .inputTitle:valid + .labelTitle {
     transform: translate(0, -15px);
+}
+
+.inputText{
+    width: 100%;
+    height: 1000px;
+    font-family: Asap, sans-serif;
+    resize: none;
+}
+
+.dummyTextArea{
+    visibility: hidden;
 }

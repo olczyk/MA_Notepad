@@ -23,9 +23,9 @@
                 <li><a href="#">14</a></li>
             </ul>
         </li>
-        <li><a href="#"><i class="fa fa-copy fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-paste fa-2x"></i></a></li>
-        <li><a href="#"><i class="fa fa-cut fa-2x"></i></a></li>
+        <li><a onclick="copy()"><i class="fa fa-copy fa-2x"></i></a></li>
+        <li><a onclick="paste()"><i class="fa fa-paste fa-2x"></i></a></li>
+        <li><a onclick="cut()"><i class="fa fa-cut fa-2x"></i></a></li>
 
         <li><a onclick="saveTextAsFile()"><i class="fa fa-save fa-2x"></i></a></li>
         <li>
@@ -42,18 +42,22 @@
     <table>
         <tr>
             <td>
-                <div class="divTitle">
+                <div class="divInput">
                     <input id="inputFileNameToSaveAs" type="text" placeholder="Document title" required class="inputTitle">
                     <label for="inputFileNameToSaveAs" class="labelTitle">Document title</label>
                 </div>
             </td>
         </tr>
         <tr>
-            <td colspan="3">
-                <textarea id="inputText" style="width:512px;height:256px"></textarea>
+            <td>
+                <div class="divInput">
+                    <textarea id="inputText" placeholder="Document body" required class="inputTitle inputText"></textarea>
+                    <label for="inputText" class="labelTitle">Document body</label>
+                </div>
             </td>
         </tr>
     </table>
 </div>
+<textarea type="text" id="dummyClipboard" class="dummyTextArea"></textarea>
 </body>
 </html>
