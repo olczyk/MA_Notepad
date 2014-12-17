@@ -23,10 +23,6 @@
                 <li><a href="#">14</a></li>
             </ul>
         </li>
-        <li><a onclick="copy()"><i class="fa fa-copy fa-2x"></i></a></li>
-        <li><a onclick="paste()"><i class="fa fa-paste fa-2x"></i></a></li>
-        <li><a onclick="cut()"><i class="fa fa-cut fa-2x"></i></a></li>
-
         <li><a onclick="saveTextAsFile()"><i class="fa fa-save fa-2x"></i></a></li>
         <li>
             <div class="fileUpload">
@@ -50,14 +46,10 @@
         </tr>
         <tr>
             <td>
-                <div class="divInput">
-                    <textarea id="inputText" placeholder="Document body" required class="inputTitle inputText"></textarea>
-                    <label for="inputText" class="labelTitle">Document body</label>
-                </div>
+                    <div id="inputText" placeholder="Document body" required class="inputTitle inputText" contenteditable="true"></div>
             </td>
         </tr>
     </table>
 </div>
-<textarea type="text" id="dummyClipboard" class="dummyTextArea"></textarea>
 </body>
 </html>
