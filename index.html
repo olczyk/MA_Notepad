@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="scripts.js"></script>
+</head>
+<body onload="load();">
+
+<div>
+<div class="toolbar">
+    <ul>
+        <li><a href="#"><i class="fa fa-bold fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-italic fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-paint-brush fa-2x"></i></a>
+        <li><a href="#"><i class="fa fa-text-height fa-2x"></i></a>
+            <ul>
+                <li><a href="#">8</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">12</a></li>
+                <li><a href="#">14</a></li>
+            </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-copy fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-paste fa-2x"></i></a></li>
+        <li><a href="#"><i class="fa fa-cut fa-2x"></i></a></li>
+
+        <li><a onclick="saveTextAsFile()"><i class="fa fa-save fa-2x"></i></a></li>
+        <li>
+            <div class="fileUpload">
+                <i class="fa fa-folder-open-o fa-2x">
+                    <input type="file" id="files" class="upload"/>
+                </i>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+<div class="textField">
+    <table>
+        <tr>
+            <td>
+                <div class="divTitle">
+                    <input id="inputFileNameToSaveAs" type="text" placeholder="Document title" required class="inputTitle">
+                    <label for="inputFileNameToSaveAs" class="labelTitle">Document title</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <textarea id="inputText" style="width:512px;height:256px"></textarea>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
