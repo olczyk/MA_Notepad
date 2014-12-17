@@ -73,6 +73,7 @@ table{
     cursor: pointer;
     border: none;
     background-color: rgb(144, 180, 255);
+    outline: none; /*removes the border after clicking the button*/
 }
 
 .toolbar li .button:hover {
@@ -116,6 +117,7 @@ table{
     background-color: rgb(144, 180, 255);
     width: 70px;
     padding: 5px;
+    outline: none;
 }
 
 .fontSizes:hover{
@@ -167,6 +169,10 @@ table{
     margin-bottom: 1em;
 }
 
+.inputTitle:focus{
+    outline: none;
+}
+
 .inputTitle:valid + .labelTitle {
     transform: translate(0, -15px);
 }
@@ -176,8 +182,4 @@ table{
     height: 1000px;
     font-family: Asap, sans-serif;
     resize: none;
-}
-
-.dummyTextArea{
-    /*visibility: hidden;*/
 }
