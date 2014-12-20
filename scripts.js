@@ -70,3 +70,8 @@ function changeFont(fontSize) {
         }
     }
 }
+
+function changeColor(obj)
+{
+    document.execCommand("foreColor", false, obj.value);
+}

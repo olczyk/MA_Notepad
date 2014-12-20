@@ -183,3 +183,24 @@ table{
     font-family: Asap, sans-serif;
     resize: none;
 }
+
+#colorPicker{
+    -webkit-appearance: none;
+    border: none;
+    width: 25px;
+    height: 25px;
+    margin: 20px;
+    outline: none;
+}
+
+#colorPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+#colorPicker::-webkit-color-swatch {
+    border: none;
+}
+
+input{
+    margin: 0;
+    padding: 0;
+}
