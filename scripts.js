@@ -1,29 +1,41 @@
 function saveTextAsFile()
 {
-    var textToWrite = document.getElementById("inputText").innerHTML;
-    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value  + ".txt";
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
 
-    var downloadLink = document.createElement("a");
-    downloadLink.download = fileNameToSaveAs;
-    downloadLink.innerHTML = "Download File";
-    if (window.webkitURL != null)
+    if( fileNameToSaveAs == null || fileNameToSaveAs == "")
     {
-        // Chrome allows the link to be clicked
-        // without actually adding it to the DOM.
-        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        sweetAlert("Error", "Document title cannot be empty!", "error");
+
     }
     else
     {
-        // Firefox requires the link to be added to the DOM
-        // before it can be clicked.
-        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-        downloadLink.onclick = destroyClickedElement;
-        downloadLink.style.display = "none";
-        document.body.appendChild(downloadLink);
-    }
+        var fileNameWithExtension = fileNameToSaveAs + ".txt";
+        var textToWrite = document.getElementById("inputText").innerHTML;
+        var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
 
-    downloadLink.click();
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameWithExtension;
+        downloadLink.innerHTML = "Download File";
+        if (window.webkitURL != null)
+        {
+            // Chrome allows the link to be clicked
+            // without actually adding it to the DOM.
+            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        }
+        else
+        {
+            // Firefox requires the link to be added to the DOM
+            // before it can be clicked.
+            downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+        }
+
+        downloadLink.click();
+
+        swal("Success", "Document " + fileNameWithExtension + " has been saved.", "success")
+    }
 }
 
 function destroyClickedElement(event)

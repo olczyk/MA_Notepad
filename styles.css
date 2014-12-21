@@ -182,6 +182,7 @@ table{
     height: 1000px;
     font-family: Asap, sans-serif;
     resize: none;
+    overflow: auto;
 }
 
 #colorPicker{
@@ -191,6 +192,12 @@ table{
     height: 25px;
     margin: 20px;
     outline: none;
+    cursor: pointer;
+}
+
+.divColorPicker:hover {
+    background-color: #2980b9;
+    cursor: pointer;
 }
 
 #colorPicker::-webkit-color-swatch-wrapper {
