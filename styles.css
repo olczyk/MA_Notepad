@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    transition: 0.25s ease-in-out;
 }
 
 body {
@@ -13,12 +12,9 @@ table{
 }
 
 .toolbar {
-    width: 100%;
-    min-width: 480px;
     background: rgb(144, 180, 255);
     font-family: Asap, sans-serif;
     text-align: center;
-    display:block;
 }
 
 .textField {
@@ -61,15 +57,12 @@ table{
     display:block;
     padding:20px 20px;
     color:#FFF;
-    text-decoration:none;
     cursor: pointer;
 }
 
 .toolbar ul li .button {
-    display:block;
     padding:20px 20px;
     color:#FFF;
-    text-decoration:none;
     cursor: pointer;
     border: none;
     background-color: rgb(144, 180, 255);
@@ -84,34 +77,22 @@ table{
     background-color: #2980b9;
 }
 
-/* The Dropdown Styles */
-/* =================== */
-
-/* Hide Dropdowns by Default */
 .toolbar ul ul {
     display: none;
     position: absolute;
-    top: 65px;
 }
 
-/* Display Dropdowns on Hover */
 .toolbar ul li:hover > ul {
     display:list-item;
 }
 
-/* First Tier Dropdown */
 .toolbar ul ul li {
     width:70px;
     float:none;
-    position: relative;
-    border-bottom:none;
 }
 
 .fontSizes{
-    margin-right: 10px;
-    display: block;
     color: #FFF;
-    text-decoration: none;
     cursor: pointer;
     border: none;
     background-color: rgb(144, 180, 255);
@@ -127,10 +108,8 @@ table{
 .toolbar li > a:only-child:after {content: ''; }
 
 .toolbar .fileUpload{
-    display: block;
     padding: 20px 20px;
     color: #FFF;
-    text-decoration: none;
     position: relative;
 }
 
@@ -178,7 +157,6 @@ table{
 }
 
 .inputText{
-    width: 100%;
     height: 1000px;
     font-family: Asap, sans-serif;
     resize: none;
@@ -186,7 +164,6 @@ table{
 }
 
 #colorPicker{
-    -webkit-appearance: none;
     border: none;
     width: 25px;
     height: 25px;
@@ -203,6 +180,7 @@ table{
 #colorPicker::-webkit-color-swatch-wrapper {
     padding: 0;
 }
+
 #colorPicker::-webkit-color-swatch {
     border: none;
 }

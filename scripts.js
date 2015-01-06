@@ -5,7 +5,6 @@ function saveTextAsFile()
     if( fileNameToSaveAs == null || fileNameToSaveAs == "")
     {
         sweetAlert("Error", "Document title cannot be empty!", "error");
-
     }
     else
     {
@@ -31,9 +30,7 @@ function saveTextAsFile()
             downloadLink.style.display = "none";
             document.body.appendChild(downloadLink);
         }
-
         downloadLink.click();
-
         swal("Success", "Document " + fileNameWithExtension + " has been saved.", "success")
     }
 }
@@ -43,7 +40,7 @@ function destroyClickedElement(event)
     document.body.removeChild(event.target);
 }
 
-
+//for loading a file
 function load() {
     var element = document.getElementById("files");
     element.addEventListener('change', handleFileSelect, false);
@@ -72,6 +69,11 @@ function italic() {
     document.execCommand('italic', false, null);
 }
 
+function changeColor(obj)
+{
+    document.execCommand("foreColor", false, obj.value);
+}
+
 function changeFont(fontSize) {
     document.execCommand("fontSize", false, "7");
     var fontElements = document.getElementsByTagName("font");
@@ -81,9 +83,4 @@ function changeFont(fontSize) {
             fontElements[i].style.fontSize = fontSize;
         }
     }
-}
-
-function changeColor(obj)
-{
-    document.execCommand("foreColor", false, obj.value);
 }
